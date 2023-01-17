@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--header-background);
+    color: var(--color-text);
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --header-background: #303030;
+    --color-text: #FFF;
+    --input-background: rgba(255, 255, 255, 0.9);
+    --placeholder-color: #616161;
+    --background-button: #0C70F2;
+}
+
+#logo img {
+    width: 170px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome h3 {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#form label {
+    display: block;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#form input {
+    background-color: var(--input-background);
+    border: 1px solid #181818;
+    border-radius: 10px;
+    height: 35px;
+    padding-left: 10px;
+    width: 50vh;
+    color: var(--header-background);
+}
+
+#form::placeholder {
+    background-color: var(--placeholder-color);
+}
+
+#form [type="button"] {
+    background-color: var(--background-button);
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    font-weight: 800;
+    font-size: 15px;
+    margin-top: 25px;
+    padding: 10px;
+}
