@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/style.css">
+
     <title>Jumpy</title>
 </head>
 
+<header>
+    <div id="logo">
+        <img src="assets/img/logo-dnc.svg" alt="Logo-Dnc">
+    </div>
+</header>
+
 <body>
-    <header>
-        <div id="logo">
-            <img src="assets/img/logo-dnc.svg" alt="Logo-Dnc">
-        </div>
-    </header>
 
     <section id="section1">
         <div id="welcome">
@@ -22,22 +24,34 @@
             <h3>Bem vindo ao Jumpy!</h3>
         </div>
 
-        <div id="form">
-            <form action="https://formspree.io/f/maykawjw" method="post">
+        <div id="div-form">
+            <form id="form" onsubmit="checkFields(); return false;">
                 <label for="fname">Nome Completo:</label>
-                <input type="text" placeholder="Nome completo" required>
+                <input type="text" placeholder="Nome completo">
+                <span class="span-required"></span>
+
                 <label for="femail">E-mail:</label>
-                <input type="email" placeholder="Email@email.com" required>
+                <input type="email" placeholder="Email@email.com">
+                <span class="span-required"></span>
+
                 <label for="ftelephone">Telefone:</label>
-                <input type="tel" placeholder="(00)00000-0000" required>
+                <input type="tel" placeholder="(00)00000-0000" oninput="checkInputIsEmpty()">
+                <span class="span-required"></span>
+
                 <label for="fcpf">CPF:</label>
-                <input type="text" placeholder="000.000.000-00" required>
+                <input type="number" placeholder="000.000.000-00" oninput="checkInputIsEmpty()">
+                <span class="span-required"></span>
+
                 <label for="fpassword">Senha:</label>
-                <input type="password" placeholder="************" required> <br>
-                <input type="button" value="Cadastrar" required>
+                <input type="password" placeholder="************" oninput="checkInputIsEmpty()">
+                <span class="span-required"></span>
+
+                <input id="register" type="submit" value="Cadastrar">
+                <span id="confirm-submission"></span>
             </form>
         </div>
     </section>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
