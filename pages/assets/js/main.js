@@ -1,8 +1,9 @@
+// variáveis 
 let inputElements = document.querySelectorAll('input')
 let spanField = document.querySelectorAll('.span-required')
 let submit = document.getElementById('confirm-submission')
 
-
+// variáveis para preencher os Spans conforme condições das funções
 let inputCheck = `'Campo Obrigatório'`
 let checkRegistration = `'Campos Obrigatórios não registrados'`
 let success = `'Sucesso!'`
@@ -10,6 +11,7 @@ let success = `'Sucesso!'`
 
 let tester = true
 
+//função que checa se todos os campos NÃO estão vazios 
 function checkFields() {
     for (let i = 0; i < inputElements.length; i++) {
         if (inputElements[i].value.trim().length == 0) {
@@ -21,7 +23,7 @@ function checkFields() {
     successSend(tester)
 }
 
-
+// função para confirmar sucesso no cadastro
 function successSend(tester) {
     if (tester) {
         submit.style.color = '#0F7B0F'
